@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libadd_rviz_obstacles.so -o /home/mainuser/Jihad/catkin_ws/devel/lib/libadd_rviz_obstacles.so CMakeFiles/add_rviz_obstacles.dir/src/add_rviz_obstacles.cpp.o 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/src/zed_franka_planner/src/constrained_based_planning_controller.cpp
+new_controllers/constrained_based_planning_controller.h
+-
+cmath
+-
+memory
+-
+controller_interface/controller_base.h
+-
+pluginlib/class_list_macros.h
+-
+ros/ros.h
+-
+franka/robot_state.h
+-
+

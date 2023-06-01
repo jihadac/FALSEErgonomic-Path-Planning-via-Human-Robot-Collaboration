@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/src/franka_planner_control/include/point.h
+iostream
+-
+
+/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/src/franka_planner_control/src/point.cpp
+point.h
+-
+

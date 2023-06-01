@@ -1,0 +1,37 @@
+# CMake generated Testfile for 
+# Source directory: /home/mainuser/Jihad/catkin_ws/src
+# Build directory: /home/mainuser/Jihad/catkin_ws/build
+# 
+# This file includes the relevant testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+subdirs("gtest")
+subdirs("franka_ros/franka_description")
+subdirs("franka_ros/franka_ros")
+subdirs("iai_kinect2/iai_kinect2")
+subdirs("panda_description")
+subdirs("panda_moveit_config")
+subdirs("franka_ros/franka_msgs")
+subdirs("algorithm")
+subdirs("octomap_tools")
+subdirs("panda_gazebo")
+subdirs("franka_ros/franka_gripper")
+subdirs("franka_ros/franka_visualization")
+subdirs("iai_kinect2/kinect2_registration")
+subdirs("ros_openpose")
+subdirs("iai_kinect2/kinect2_bridge")
+subdirs("iai_kinect2/kinect2_calibration")
+subdirs("iai_kinect2/kinect2_viewer")
+subdirs("panda_control")
+subdirs("agni_tf_tools")
+subdirs("franka_ros/franka_hw")
+subdirs("franka_ros/franka_control")
+subdirs("franka_ros/franka_example_controllers")
+subdirs("algorithm_panda_moveit")
+subdirs("camera_integration")
+subdirs("franka_planner_control")
+subdirs("panda_moveit")
+subdirs("zed-ros-example/zed_display_rviz")
+subdirs("zed_interfaces")
+subdirs("zed-ros-example/rviz-plugin-zed-od")
+subdirs("zed_franka_planner")
+subdirs("zed_saver")

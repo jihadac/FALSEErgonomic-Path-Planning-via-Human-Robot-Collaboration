@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: camera_integration
+Description: Description of camera_integration
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

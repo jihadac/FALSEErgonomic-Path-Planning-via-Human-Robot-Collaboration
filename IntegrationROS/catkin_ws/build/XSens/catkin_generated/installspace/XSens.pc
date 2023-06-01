@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: XSens
+Description: Description of XSens
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,11 @@
+float64 time
+geometry_msgs/Point lowerarm_startpoint
+geometry_msgs/Point lowerarm_endpoint
+geometry_msgs/Point lowerarm_center
+geometry_msgs/Quaternion quat_lowerarm2robot
+geometry_msgs/Point upperarm_startpoint
+geometry_msgs/Point upperarm_endpoint
+geometry_msgs/Point upperarm_center
+geometry_msgs/Quaternion quat_upperarm2robot
+geometry_msgs/Point head_center
+geometry_msgs/Quaternion quat_head2robot

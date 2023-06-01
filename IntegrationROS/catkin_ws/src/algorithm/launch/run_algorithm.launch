@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="algorithm" type="Main.py" name="ergonomic_path_planning" output="screen"/>
+</launch>
+
+

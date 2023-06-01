@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/devel
+
+Name: openpose
+Description: Description of openpose
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <arg name="rviz" default="true"/>
+    <arg name="robot_ip" default ="192.168.2.106"/>
+    <arg name="load_gripper" default="true" />
+    <arg name="path" default="$(find zed_franka_planner)/octomaps/moveit_grasp_octomap4.bt"/>
+    <arg name="panda_to_map_transfo" default="1.02 0.18 0.688 0 0 0.940 -0.342"/>
+    <arg name="robot_task" default="moveit_octomap_move"/>
+
+
+  <include file="$(find franka_control)/launch/franka_control.launch" >
+    <arg name="robot_ip" value="$(arg robot_ip)" />
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"  args="position_joint_trajectory_controller"/>
+  <include file="$(find panda_moveit_config)/launch/move_group.launch">
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>
+
+  <param name="/move_group/trajectory_execution/execution_duration_monitoring" value="false"/>
+
+    <node pkg="octomap_server" type="octomap_server_node" name="octomap_talker" output="screen" args="$(arg path)">
+    </node>
+    <group if="$(arg rviz)">
+        <include file="$(find panda_moveit_config)/launch/moveit_rviz.launch">
+          <arg name = "rviz_config" value = "$(find zed_franka_planner)/rviz/plan_in_octomap.rviz"/>
+        </include>
+  </group>
+    
+  <node pkg="tf2_ros" type="static_transform_publisher" name="to_panda" args="0 0 0 0 0 0  world panda_link0" />
+  <node pkg="tf2_ros" type="static_transform_publisher" name="world_link_to_map" args="$(arg panda_to_map_transfo) world map_octomap" />
+  <node pkg="octomap_tools" type="octoload.py" name="moveit_octomap_handler" output="screen"/>
+
+
+  <node pkg="franka_planner_control" type="$(arg robot_task)" name="$(arg robot_task)" output="screen"/>
+  
+
+
+
+</launch>

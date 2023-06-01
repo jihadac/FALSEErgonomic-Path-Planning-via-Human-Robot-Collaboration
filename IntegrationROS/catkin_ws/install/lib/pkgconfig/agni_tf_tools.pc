@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: agni_tf_tools
+Description: Description of agni_tf_tools
+Version: 0.1.6
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp rviz

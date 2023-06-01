@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/devel
+
+Name: octomap_loader
+Description: Description of octomap_loader
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

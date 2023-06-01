@@ -1,0 +1,21 @@
+<launch>
+
+<!-- File that simply launches gazebo, no rviz, and spawns the robot -->
+
+<!-- Launch Gazebo -->
+  <include file="$(find panda_gazebo)/launch/panda_world.launch" />
+  
+   
+  <!--<include file="$(find panda_control)/launch/panda_joint_states.launch" /> -->
+  
+  <include file="$(find panda_control)/launch/panda_trajectorycontrol.launch" />
+  
+ <!-- <include file="$(find panda_moveit_config)/launch/moveit_planning_execution.launch" /> -->
+  
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+    <param name="/use_gui" value="false"/>
+    <rosparam param="/source_list">[/move_group/fake_controller_joint_states]</rosparam>
+</node>
+
+
+</launch>

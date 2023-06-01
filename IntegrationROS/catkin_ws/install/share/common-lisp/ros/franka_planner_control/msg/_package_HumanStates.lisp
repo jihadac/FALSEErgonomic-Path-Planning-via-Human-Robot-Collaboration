@@ -1,0 +1,24 @@
+(cl:in-package franka_planner_control-msg)
+(cl:export '(TIME-VAL
+          TIME
+          LOWERARM_STARTPOINT-VAL
+          LOWERARM_STARTPOINT
+          LOWERARM_ENDPOINT-VAL
+          LOWERARM_ENDPOINT
+          LOWERARM_CENTER-VAL
+          LOWERARM_CENTER
+          QUAT_LOWERARM2ROBOT-VAL
+          QUAT_LOWERARM2ROBOT
+          UPPERARM_STARTPOINT-VAL
+          UPPERARM_STARTPOINT
+          UPPERARM_ENDPOINT-VAL
+          UPPERARM_ENDPOINT
+          UPPERARM_CENTER-VAL
+          UPPERARM_CENTER
+          QUAT_UPPERARM2ROBOT-VAL
+          QUAT_UPPERARM2ROBOT
+          HEAD_CENTER-VAL
+          HEAD_CENTER
+          QUAT_HEAD2ROBOT-VAL
+          QUAT_HEAD2ROBOT
+))

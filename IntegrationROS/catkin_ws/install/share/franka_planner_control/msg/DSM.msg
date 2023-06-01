@@ -1,0 +1,10 @@
+float64 time
+float64 DSM
+float64 tau
+float64 dotq
+float64 q
+float64 dotp_EE
+float64 terminalenergy
+float64 sphere
+float64 cylinder
+float64 wall

@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: elion_planner
+Description: Description of elion_planner
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lelion_planner
+Requires: moveit_core moveit_msgs

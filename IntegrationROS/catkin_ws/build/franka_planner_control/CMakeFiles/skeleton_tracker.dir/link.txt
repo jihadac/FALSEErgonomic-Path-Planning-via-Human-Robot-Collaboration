@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG -shared -Wl,-soname,libskeleton_tracker.so -o /home/mainuser/Jihad/catkin_ws/devel/lib/libskeleton_tracker.so CMakeFiles/skeleton_tracker.dir/src/skeleton_tracker.cpp.o 

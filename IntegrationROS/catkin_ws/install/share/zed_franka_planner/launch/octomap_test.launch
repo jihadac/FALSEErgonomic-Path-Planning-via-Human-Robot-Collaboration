@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="rviz" default="true"/>
+  <arg name="octo_path" default="/home/mainuser/Downloads/small_octomap.bt"/>
+  <arg name="robot_ip" default ="192.168.2.106"/> 
+  <arg name="load_gripper" default="true" />
+
+  <include file="$(find franka_control)/launch/franka_control.launch" >
+    <arg name="robot_ip" value="$(arg robot_ip)" />
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>
+
+  <include file="$(find panda_moveit_config)/launch/move_group.launch">
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>
+
+  <group if="$(arg rviz)">
+        <include file="$(find panda_moveit_config)/launch/moveit_rviz.launch" />
+  </group>
+
+<node pkg="octomap_server" type="octomap_server_node" name="octomap_talker" output="screen" args="$(arg octo_path)">
+</node>
+
+<node pkg="octomap_loader" type="octoload.py" name="moveit_octomap_handler" output="screen">
+</node>
+
+
+
+</launch>

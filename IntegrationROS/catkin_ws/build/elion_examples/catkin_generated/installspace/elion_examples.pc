@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: elion_examples
+Description: Description of elion_examples
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

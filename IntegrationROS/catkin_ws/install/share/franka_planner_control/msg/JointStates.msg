@@ -1,0 +1,12 @@
+float64 time
+geometry_msgs/Pose xe_r
+geometry_msgs/Pose xe_v
+geometry_msgs/Pose xe
+float64[7] q_r
+float64[7] q_v
+float64[7] q
+float64[7] dotq
+float64[7] tau_commanded
+float64[7] tau_desired_g
+float64[7] tau_desired_full
+float64[7] tau_measured

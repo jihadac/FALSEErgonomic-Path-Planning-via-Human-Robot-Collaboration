@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Jihad/catkin_ws/install
+
+Name: franka_hw
+Description: Description of franka_hw
+Version: 0.6.0
+Cflags: -I${prefix}/include -I/home/mainuser/Jihad/libfranka/include
+Libs: -L${prefix}/lib -lfranka_hw /home/mainuser/Jihad/libfranka/build/libfranka.so.0.7.1
+Requires: controller_interface hardware_interface joint_limits_interface roscpp urdf

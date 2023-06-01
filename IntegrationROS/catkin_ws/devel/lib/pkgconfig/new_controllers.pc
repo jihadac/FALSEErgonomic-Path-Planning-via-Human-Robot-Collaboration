@@ -1,0 +1,8 @@
+prefix=/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/devel
+
+Name: new_controllers
+Description: Description of new_controllers
+Version: 0.6.0
+Cflags: -I/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/devel/include -I/home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/libfranka/include
+Libs: -L${prefix}/lib -lnew_controllers /home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/libfranka/build/libfranka.so.0.7.1
+Requires: controller_interface dynamic_reconfigure eigen_conversions franka_hw geometry_msgs hardware_interface tf tf_conversions message_runtime pluginlib realtime_tools roscpp moveit_core moveit_visual_tools moveit_ros_planning_interface interactive_markers tf2_geometry_msgs

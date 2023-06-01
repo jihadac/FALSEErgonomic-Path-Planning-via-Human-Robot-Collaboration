@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <arg name="rviz" default="true"/>
+    <arg name="robot_ip" default ="192.168.2.106"/>
+    <arg name="load_gripper" default="true" />
+
+    <include file="$(find franka_control)/launch/franka_control.launch" >
+        <arg name="robot_ip" value="$(arg robot_ip)" />
+        <arg name="load_gripper" value="$(arg load_gripper)" />
+    </include>
+
+     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find franka_planner_control)/rviz/erg_visualization_test.rviz" output="screen"/>
+
+    <node pkg="tf2_ros" type="static_transform_publisher" name="to_panda" args="0 0 0 0 0 0  world panda_link0" /> <!-- world =  , panda_link0 = Panda robot base -->
+    <node pkg="tf2_ros" type="static_transform_publisher" name="world_link_to_map" args="1 1 1 0 0 0 world map" /> <!-- world =  , map = ZED camera frame -->
+
+    <rosparam command="load" file="$(find franka_planner_control)/config/franka_planner_control.yaml" />
+    <node pkg="franka_planner_control" type="erg_visualization_test" name="erg_visualization_test" output="screen"/>
+</launch>

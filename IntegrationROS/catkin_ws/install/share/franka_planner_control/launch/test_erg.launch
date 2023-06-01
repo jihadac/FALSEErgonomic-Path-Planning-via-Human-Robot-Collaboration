@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="robot_ip" default ="192.168.2.106"/> 
+  <arg name="load_gripper" default="true" />
+  <include file="$(find franka_control)/launch/franka_control.launch" >
+    <arg name="robot_ip" value="$(arg robot_ip)" />
+    <arg name="load_gripper" value="$(arg load_gripper)" />
+  </include>
+
+  <!-- <node pkg="rqt_plot" type="rqt_plot" name="DSM_plot" args="/Panda/DSM/DSM_tau
+                                                              /Panda/DSM/DSM_sphere
+                                                              /Panda/DSM/DSM_wall
+                                                              /Panda/DSM/DSM_cylinder
+                                                              /Panda/DSM/DSM_dotq
+                                                              /Panda/DSM/DSM_q
+                                                              /Panda/DSM/DSM_dotp_EE"/>  -->
+   <node pkg="tf2_ros" type="static_transform_publisher" name="to_panda" args="0 0 0 0 0 0  world panda_link0" />
+  <rosparam command="load" file="$(find franka_planner_control)/config/franka_planner_control.yaml" />
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"  args="test_erg"/>
+  
+  <!-- <node pkg="rviz" type="rviz" output="screen" name="rviz" args="-d $(find franka_planner_control)/launch/robot.rviz"/> -->
+  <node pkg="rviz" type="rviz" output="screen" name="rviz" args="-d $(find franka_planner_control)/launch/robot_visualization_marker.rviz"/>
+</launch>

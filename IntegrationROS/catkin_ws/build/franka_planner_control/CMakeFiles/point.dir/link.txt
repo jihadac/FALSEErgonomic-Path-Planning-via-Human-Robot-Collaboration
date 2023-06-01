@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -O3 -DNDEBUG  -shared -Wl,-soname,libpoint.so -o /home/mainuser/Documents/panda_brubotics_2021/franka_constrained_control/catkin_ws/devel/lib/libpoint.so CMakeFiles/point.dir/src/point.cpp.o 

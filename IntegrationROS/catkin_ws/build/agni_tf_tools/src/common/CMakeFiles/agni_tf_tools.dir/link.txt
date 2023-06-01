@@ -1,0 +1,2 @@
+/usr/bin/ar qc /home/mainuser/Jihad/catkin_ws/devel/lib/libagni_tf_tools.a CMakeFiles/agni_tf_tools.dir/agni_tf_tools_autogen/mocs_compilation.cpp.o CMakeFiles/agni_tf_tools.dir/EulerWidget.cpp.o CMakeFiles/agni_tf_tools.dir/TransformWidget.cpp.o CMakeFiles/agni_tf_tools.dir/FramesWidget.cpp.o CMakeFiles/agni_tf_tools.dir/TransformBroadcaster.cpp.o
+/usr/bin/ranlib /home/mainuser/Jihad/catkin_ws/devel/lib/libagni_tf_tools.a

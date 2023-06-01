@@ -1,0 +1,15 @@
+<library path="lib/libzed_franka_planner">
+
+  <class name="zed_franka_planner/TestExample" type="zed_franka_planner::TestExample" base_class_type="controller_interface::ControllerBase">
+    <description>
+      clone code test
+    </description>
+  </class>
+  <class name="zed_franka_planner/ConstrainedBasedPlanningController" type="zed_franka_planner::ConstrainedBasedPlanningController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      A controller that tracks a cartesian path with a joint impedance controller that compensates coriolis torques. The torque commands are compared to measured torques in Console outputs.
+    </description>
+  </class>
+
+
+</library>

@@ -1,0 +1,42 @@
+<library path="lib/libfranka_planner_control">
+  <class name="franka_planner_control/ImpedanceControlPathExecute" type="franka_planner_control::ImpedanceControlPathExecute" base_class_type="controller_interface::ControllerBase">
+    <description>
+      A controller that tracks a cartesian path with a joint impedance controller that compensates coriolis torques. The torque commands are compared to measured torques in Console outputs.
+    </description>
+  </class>
+  <class name="franka_planner_control/SelectorErgStaticMoveController" type="franka_planner_control::SelectorErgStaticMoveController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      A controller that follows a path planned by MoveIt and adapts it with the ERG strategy. Experiments are executed in a static pre-programmed environment with pre-programmed pose references. 
+    </description>
+  </class>
+  <class name="franka_planner_control/ErgStaticMoveController" type="franka_planner_control::ErgStaticMoveController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      The trajectory-based ERG that lets the robot move to a desired reference. Experiments are executed in a static pre-programmed environment with pre-programmed pose references. 
+    </description>
+  </class>
+  <class name="franka_planner_control/ErgDynamicStayController" type="franka_planner_control::ErgDynamicStayController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      The trajectory-based ERG keeps the robot in the initial configuration while avoiding the human seen by the ZED 2 camera.  
+    </description>
+  </class>
+  <class name="franka_planner_control/SelectorErgDynamicMoveController" type="franka_planner_control::SelectorErgDynamicMoveController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      The trajectory-based ERG keeps the robot in the initial configuration while avoiding the human seen by the ZED 2 camera.  
+    </description>
+  </class>
+  <class name="franka_planner_control/TestErg" type="franka_planner_control::TestErg" base_class_type="controller_interface::ControllerBase">
+    <description>
+      Test the ExplicitReferenceGovernor class.
+    </description>
+  </class>
+  <class name="franka_planner_control/TestErgSelector" type="franka_planner_control::TestErgSelector" base_class_type="controller_interface::ControllerBase">
+    <description>
+      Test the ExplicitReferenceGovernor class.
+    </description>
+  </class>  
+  <class name="franka_planner_control/PandaModelController" type="franka_planner_control::PandaModelController" base_class_type="controller_interface::ControllerBase">
+    <description>
+      A controller that evaluates and prints the dynamic model of Franka
+    </description>
+  </class>
+</library>
